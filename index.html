@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Examples</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="js/sha256.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h3>Examples created by Gideon Tsang</h3>
+  <br/>
+  <br/>
+  <ul class="nav nav-tabs nav-justified">
+    <li><a data-toggle="tab" href="#home">Home</a></li>
+    <li class="active"><a data-toggle="tab" href="#blockchain">Blockchain</a></li>
+    <li><a data-toggle="tab" href="#robotics">Robotics</a></li>
+    <li><a data-toggle="tab" href="#ml">Machine Learning</a></li>
+    <li><a data-toggle="tab" href="#iot">IoT</a></li>
+  </ul>
+  <br>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade">
+      <h3>HOME</h3>
+      <p>This page is an intruduction.</p>
+    </div>
+    <div id="blockchain" class="tab-pane fade in active">
+      <h3>Blockchain</h3>
+      <p>Demo and example of mining!</p>
+
+     	<textarea id="input" rows=5>12345</textarea>
+			<!-- <input id="button" type="button" value="calculate" /> -->
+			<br/>
+			<button onclick="hashIt()">Hash it!</button>
+			<br/>
+			<br/>
+			<textarea id="output" rows="4" cols="60" style="text-align: center"></textarea>
+
+			<script>
+			var i = 0;
+			function hashIt(){
+					setInterval(function(){ document.getElementById('output').value = sha256(document.getElementById('input').value + i); i++; }, 10);
+				  console.log(i);
+			}
+			</script>
+
+    </div>
+    <div id="robotics" class="tab-pane fade">
+      <h3>Robotics</h3>
+      <p>Showing a demo of how FK/IK are computed!</p>
+    </div>
+    <div id="ml" class="tab-pane fade">
+      <h3>Machine Learning</h3>
+      <p>Demo the use of Tensorflow Object Detection API to</p>
+    </div>
+    <div id="iot" class="tab-pane fade">
+      <h3>IoT</h3>
+      <p>Demo Some simple IoT stuff</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
